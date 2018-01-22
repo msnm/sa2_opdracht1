@@ -64,7 +64,7 @@ Extra
 --
 __**Request parameters**__
 
-Naast het vastleggen van parameters in het pad van een URL kan je ook gebruik maken van *request parameters*. Request parameters, deel van de *[querystrin*g](https://nl.wikipedia.org/wiki/Querystring), volgen in de URL na het pad, na een `?`.
+Naast het vastleggen van parameters in het pad van een URL kan je ook gebruik maken van *request parameters*. Request parameters, deel van de *[querystring](https://nl.wikipedia.org/wiki/Querystring)*, volgen in de URL na het pad, na een `?`.
 * Probeer de entry ID mee te geven als request parameter m.b.v. de annotatie [RequestParam](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestParam.html), in plaats van via `PathVariable`.
 
 __**ResponseEntity**__
