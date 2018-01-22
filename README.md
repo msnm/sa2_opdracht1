@@ -40,9 +40,8 @@ Vul je controller aan met volgende functionaliteit:
 
 * GET op `/blog`
     * Je controller stuurt **html** terug naar de client.  
-      Je overloopt de entries van de blog en hun tags en stelt een HTML string samen met o.a. enkele `h1`, `h2`, `p`, `ul`, `li` en `span` tags. Je kan je baseren op dit voorbeeld:
-      ![Screenshot HTML](/images/image1.png?raw=true "HTML voorstelling in Chrome")
-      
+      Je overloopt de entries van de blog en hun tags en stelt een HTML string samen met o.a. enkele `h1`, `h2`, `p`, `ul`, `li` en `span` tags. Je kan je baseren op dit voorbeeld:  
+      ![Screenshot HTML](/images/image1.png?raw=true "HTML voorstelling in Chrome")  
       De layout is **niet** belangrijk!
         * __**Tip:**__ `StringBuilder`
     * Zorg voor een correcte invulling van `Content-Type` in je HTTP header.
