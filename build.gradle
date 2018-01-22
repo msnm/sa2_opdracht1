@@ -1,0 +1,33 @@
+group 'be.kdg'
+version '0.1'
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath(group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: springBootVersion)
+    }
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion)
+    compile(group: 'com.google.code.gson', name: 'gson', version: '2.8.1')
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion)
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4.1'
+}
