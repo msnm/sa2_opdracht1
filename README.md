@@ -45,7 +45,7 @@ Vul je controller aan met volgende functionaliteit:
       De layout is **niet** belangrijk!
         * __**Tip:**__ `StringBuilder`
     * Zorg voor een correcte invulling van `Content-Type` in je HTTP header.
-    * De content moet in de HTTP body terecht komen. 
+    * De content moet in de HTTP body terecht komen.
 
 Deel 3
 --
@@ -53,7 +53,9 @@ Vul je controller aan met volgende functionaliteit:
 
 * GET op `/api/blog/entries/{entryId}`
     * Je controller stuurt **json** terug naar de client.  
-      Het laatste deel van het pad (*entryId*) is een getal dat de ID van de gewenste blog entry voorstelt. De methode van je controller heeft een parameter nodig (ook met de naam *entryId*) die geannoteerd is met `PathVariable`.
+      Het laatste deel van het pad (*entryId*) is een getal dat de ID van de gewenste blog entry voorstelt. De methode van je controller heeft een parameter nodig (ook met de naam *entryId*) die geannoteerd is met `PathVariable`.  
+      Informatie over `PathVariable` kan je o.a. terugvinden in sectie 5.3.2 van het boek. De voorbeelden daar
+      zijn niet uitgewerkt met `ResponseBody`, maar daarnaast heel toepasselijk.  
       Je gaat op zoek naar de juiste blog entry en stuurt deze terug in JSON formaat.  
       __**Tip:**__ gebruik [Gson](http://www.javadoc.io/doc/com.google.code.gson/gson/2.8.2) om het object om te zetten naar een string in JSON formaat.
     * Zorg voor een correcte invulling van `Content-Type` in je HTTP header.
@@ -65,7 +67,7 @@ Extra
 __**Request parameters**__
 
 Naast het vastleggen van parameters in het pad van een URL kan je ook gebruik maken van *request parameters*. Request parameters, deel van de *[querystring](https://nl.wikipedia.org/wiki/Querystring)*, volgen in de URL na het pad, na een `?`.
-* Probeer de entry ID mee te geven als request parameter m.b.v. de annotatie [RequestParam](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestParam.html), in plaats van via `PathVariable`.
+* Probeer de entry ID mee te geven als request parameter m.b.v. de annotatie [RequestParam](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestParam.html), in plaats van via `PathVariable`. Zie ook sectie 5.3.1 van het boek.
 
 __**ResponseEntity**__
 
