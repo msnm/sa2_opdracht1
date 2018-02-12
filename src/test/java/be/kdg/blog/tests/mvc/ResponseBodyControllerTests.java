@@ -47,7 +47,23 @@ public class ResponseBodyControllerTests {
                 .webAppContextSetup(wac)
                 .build();
     }
+    @Test
+    public void testTextPlain() throws Exception {
+        this.mvc.perform(get("/")
+                .accept(MediaType.TEXT_PLAIN))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string("Hello, World!"));
+    }
 
+    @Test
+    public void testHtml() throws Exception {
+        this.mvc.perform(get("/html")
+                .accept(MediaType.TEXT_HTML_VALUE))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(containsString("<h1>Hello, world!</h1>"));
+    }
     @Test
     public void testApi() throws Exception {
         List<BlogEntry> blogEntries = new ArrayList<>();
